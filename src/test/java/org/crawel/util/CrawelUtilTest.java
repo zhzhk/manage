@@ -1,10 +1,10 @@
-package org.game.util;
+package org.crawel.util;
 
 import java.io.IOException;
 import java.text.ParseException;
 
 import org.apache.http.client.ClientProtocolException;
-import org.game.water.crawel.CrawelUtil;
+import org.crawel.util.CrawelUtil;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

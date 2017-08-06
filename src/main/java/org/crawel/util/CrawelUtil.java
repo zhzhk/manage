@@ -1,4 +1,4 @@
-package org.game.water.crawel;
+package org.crawel.util;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -15,9 +15,9 @@ import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.fluent.Form;
 import org.apache.http.client.fluent.Request;
 import org.apache.http.client.fluent.Response;
-import org.game.entity.GameData;
-import org.game.entity.UrlData;
-import org.game.service.UrlDao;
+import org.crawel.entity.GameData;
+import org.crawel.entity.UrlData;
+import org.crawel.service.UrlDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -25,7 +25,7 @@ import org.springframework.stereotype.Component;
 public class CrawelUtil {
 	@Autowired
 	private UrlDao urlDao;
-	//Ä£ÄâµÇÂ¼£¬»ñÈ¡uid
+	//Ä£ï¿½ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½È¡uid
 	public void LoginAction() throws ClientProtocolException, IOException{
 		UrlData urlData = urlDao.getUrlData("1");
 		String loginUsername = urlData.getUsername();
@@ -77,8 +77,8 @@ public class CrawelUtil {
 			data[i++] = st.nextToken();
 		}
 //		System.out.println(data[0]);
-//		String dataString1 = "parent.GameFT[0]=new Array('2831448','08-03<br>10:00p<br><font color=red>Running Ball</font>','Å®×ÓËÄ¹úÑûÇëÈü(ÔÚÃÀ¹ú)','40096','40095','ÃÀ¹ú(Å®)','ÈÕ±¾(Å®)','H','1 / 1.5','0.67','0.57','O3','U3','0.65','0.57','1.09','5.10','4.25','µ¥','Ë«','1.64','1.65','2831448','H','0.5','0.63','0.61','O1 / 1.5','U1 / 1.5','0.61','0.61','1.62','4.70','2.20','7','0','','N');\nparent.GameFT[1]=new Array('2831450','08-03<br>10:00p<br><font color=red>Running Ball</font>','Å®×ÓËÄ¹úÑûÇëÈü(ÔÚÃÀ¹ú)','40098','40097','ÃÀ¹ú(Å®)','ÈÕ±¾(Å®)','H','1.5','0.85','0.39','O3 / 3.5','U3 / 3.5','0.41','0.81','','','','','','','','2831450','H','0.5 / 1','0.89','0.35','O1.5','U1.5','0.34','0.88','','','','4','0','','N');parent.GameFT[2]=new Array('2841840','08-03<br>10:00p<br><font color=red>Running Ball</font>','ÃÀÖÞÁªÈü','41204','41203','ÎÖÌØ¶û·Æ¶ûµÙ [ÖÐ]','±´¶ûÄªÅËÇ¿µÁ','H','1','0.44','0.80','O2.5','U2.5','0.51','0.71','1.08','6.30','3.80','µ¥','Ë«','1.66','1.63','2841840','H','0 / 0.5','0.41','0.83','O1','U1','0.56','0.66','1.80','5.20','1.86','7','0','','N');function onLoad(){	";
-//		String dataString1 = "[{\"id\":13,\"receiveTime\":\"2013-04-20 00:00:00 ÐÇÆÚÁù\",\"sensorType\":\"0 \",\"value\":\"19\"},{\"id\":14,\"receiveTime\":\"2013-04-21 00:00:00 ÐÇÆÚÈÕ\",\"sensorType\":\"1 \",\"value\":\"20\"},{\"id\":3,\"receiveTime\":\"2013-04-14 00:00:00 ÐÇÆÚÈÕ\",\"sensorType\":\"2 \",\"value\":\"20\"},{\"id\":4,\"receiveTime\":\"2013-04-15 00:00:00 ÐÇÆÚÒ»\",\"sensorType\":\"3 \",\"value\":\"20\"},{\"id\":15,\"receiveTime\":\"2013-04-23 00:00:00 ÐÇÆÚ¶þ\",\"sensorType\":\"5 \",\"value\":\"21\"},{\"id\":6,\"receiveTime\":\"2013-04-16 00:00:00 ÐÇÆÚ¶þ\",\"sensorType\":\"6 \",\"value\":\"20\"},{\"id\":7,\"receiveTime\":\"2013-04-17 00:00:00 ÐÇÆÚÈý\",\"sensorType\":\"7 \",\"value\":\"22\"},{\"id\":8,\"receiveTime\":\"2013-04-18 00:00:00 ÐÇÆÚËÄ\",\"sensorType\":\"8 \",\"value\":\"32\"},{\"id\":9,\"receiveTime\":\"2013-04-19 00:00:00 ÐÇÆÚÎå\",\"sensorType\":\"9 \",\"value\":\"21\"},{\"id\":10,\"receiveTime\":\"2013-04-19 00:00:00 ÐÇÆÚÎå\",\"sensorType\":\"10\",\"value\":\"15\"},{\"id\":11,\"receiveTime\":\"2013-04-19 00:00:00 ÐÇÆÚÎå\",\"sensorType\":\"11\",\"value\":\"20\"},{\"id\":12,\"receiveTime\":\"2013-04-20 00:00:00 ÐÇÆÚÁù\",\"sensorType\":\"12\",\"value\":\"18\"}]; }";
+//		String dataString1 = "parent.GameFT[0]=new Array('2831448','08-03<br>10:00p<br><font color=red>Running Ball</font>','Å®ï¿½ï¿½ï¿½Ä¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½(ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½)','40096','40095','ï¿½ï¿½ï¿½ï¿½(Å®)','ï¿½Õ±ï¿½(Å®)','H','1 / 1.5','0.67','0.57','O3','U3','0.65','0.57','1.09','5.10','4.25','ï¿½ï¿½','Ë«','1.64','1.65','2831448','H','0.5','0.63','0.61','O1 / 1.5','U1 / 1.5','0.61','0.61','1.62','4.70','2.20','7','0','','N');\nparent.GameFT[1]=new Array('2831450','08-03<br>10:00p<br><font color=red>Running Ball</font>','Å®ï¿½ï¿½ï¿½Ä¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½(ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½)','40098','40097','ï¿½ï¿½ï¿½ï¿½(Å®)','ï¿½Õ±ï¿½(Å®)','H','1.5','0.85','0.39','O3 / 3.5','U3 / 3.5','0.41','0.81','','','','','','','','2831450','H','0.5 / 1','0.89','0.35','O1.5','U1.5','0.34','0.88','','','','4','0','','N');parent.GameFT[2]=new Array('2841840','08-03<br>10:00p<br><font color=red>Running Ball</font>','ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½','41204','41203','ï¿½ï¿½ï¿½Ø¶ï¿½ï¿½Æ¶ï¿½ï¿½ï¿½ [ï¿½ï¿½]','ï¿½ï¿½ï¿½ï¿½Äªï¿½ï¿½Ç¿ï¿½ï¿½','H','1','0.44','0.80','O2.5','U2.5','0.51','0.71','1.08','6.30','3.80','ï¿½ï¿½','Ë«','1.66','1.63','2841840','H','0 / 0.5','0.41','0.83','O1','U1','0.56','0.66','1.80','5.20','1.86','7','0','','N');function onLoad(){	";
+//		String dataString1 = "[{\"id\":13,\"receiveTime\":\"2013-04-20 00:00:00 ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½\",\"sensorType\":\"0 \",\"value\":\"19\"},{\"id\":14,\"receiveTime\":\"2013-04-21 00:00:00 ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½\",\"sensorType\":\"1 \",\"value\":\"20\"},{\"id\":3,\"receiveTime\":\"2013-04-14 00:00:00 ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½\",\"sensorType\":\"2 \",\"value\":\"20\"},{\"id\":4,\"receiveTime\":\"2013-04-15 00:00:00 ï¿½ï¿½ï¿½ï¿½Ò»\",\"sensorType\":\"3 \",\"value\":\"20\"},{\"id\":15,\"receiveTime\":\"2013-04-23 00:00:00 ï¿½ï¿½ï¿½Ú¶ï¿½\",\"sensorType\":\"5 \",\"value\":\"21\"},{\"id\":6,\"receiveTime\":\"2013-04-16 00:00:00 ï¿½ï¿½ï¿½Ú¶ï¿½\",\"sensorType\":\"6 \",\"value\":\"20\"},{\"id\":7,\"receiveTime\":\"2013-04-17 00:00:00 ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½\",\"sensorType\":\"7 \",\"value\":\"22\"},{\"id\":8,\"receiveTime\":\"2013-04-18 00:00:00 ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½\",\"sensorType\":\"8 \",\"value\":\"32\"},{\"id\":9,\"receiveTime\":\"2013-04-19 00:00:00 ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½\",\"sensorType\":\"9 \",\"value\":\"21\"},{\"id\":10,\"receiveTime\":\"2013-04-19 00:00:00 ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½\",\"sensorType\":\"10\",\"value\":\"15\"},{\"id\":11,\"receiveTime\":\"2013-04-19 00:00:00 ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½\",\"sensorType\":\"11\",\"value\":\"20\"},{\"id\":12,\"receiveTime\":\"2013-04-20 00:00:00 ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½\",\"sensorType\":\"12\",\"value\":\"18\"}]; }";
 		String pattern2 = "parent.GameFT\\[\\d+\\]=new Array\\((.*)\\);";
 		Pattern r2 = Pattern.compile(pattern2);		
 		Matcher m2 = r2.matcher(dataString);
@@ -87,6 +87,7 @@ public class CrawelUtil {
 		Calendar cal = Calendar.getInstance();
 		int year = cal.get(Calendar.YEAR);
 		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-M-d");
+		SimpleDateFormat timeFormat = new SimpleDateFormat("yyyy-M-d HH:mm:ss");
 		while(m2.find()){
 			count++;
 //			System.out.println(m2.group(1));
@@ -96,6 +97,8 @@ public class CrawelUtil {
 			String[] timeArray = dataArray[1].split("<br>");
 			long time = dateFormat.parse(year+"-"+timeArray[0]).getTime();
 			Date date = new java.sql.Date(time);
+			long detailTime = timeFormat.parse(year+"-"+timeArray[0]+" "+timeArray[1].substring(0,timeArray[1].length()-1)+":00").getTime();
+			java.sql.Date dateTime = new java.sql.Date(detailTime);
 			GameData gameData = new GameData();
 			gameData.setMid(Integer.parseInt(dataArray[0]));
 			gameData.setType("FT");
@@ -107,7 +110,7 @@ public class CrawelUtil {
 			gameData.setM_league_cn(dataArray[2]);
 			gameData.setM_date(date);
 			gameData.setM_time(timeArray[1]);
-			gameData.setM_start(date);
+			gameData.setM_start(dateTime);
 			gameData.setM_type("1");
 			
 			gameData.setShowTypeRB(dataArray[7]);

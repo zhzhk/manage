@@ -1,4 +1,4 @@
-package org.game.service.impl;
+package org.crawel.service.impl;
 
 import java.sql.Date;
 import java.sql.PreparedStatement;
@@ -7,9 +7,9 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.game.entity.GameData;
-import org.game.entity.UrlData;
-import org.game.service.UrlDao;
+import org.crawel.entity.GameData;
+import org.crawel.entity.UrlData;
+import org.crawel.service.UrlDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BatchPreparedStatementSetter;
 import org.springframework.jdbc.core.JdbcTemplate;

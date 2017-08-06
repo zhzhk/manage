@@ -1,9 +1,9 @@
-package org.game.service;
+package org.crawel.service;
 
 import java.util.List;
 
-import org.game.entity.GameData;
-import org.game.entity.UrlData;
+import org.crawel.entity.GameData;
+import org.crawel.entity.UrlData;
 import org.springframework.stereotype.Service;
 
 @Service

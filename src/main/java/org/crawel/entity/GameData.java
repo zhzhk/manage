@@ -1,4 +1,4 @@
-package org.game.entity;
+package org.crawel.entity;
 
 import java.util.Date;
 

@@ -1,4 +1,4 @@
-package org.game.util;
+package org.crawel.util;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
