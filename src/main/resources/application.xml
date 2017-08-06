@@ -11,7 +11,7 @@
 		http://www.springframework.org/schema/tx/spring-tx.xsd">
 	<context:annotation-config />
 	<context:property-placeholder location="jdbc.properties"/>
-	<context:component-scan base-package="org.game"></context:component-scan>
+	<context:component-scan base-package="org.crawel"></context:component-scan>
 	<!-- <tx:annotation-driven/> -->
 	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 		<property name="driverClassName" value="${jdbc.driverClass}" />
