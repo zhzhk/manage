@@ -1,4 +1,4 @@
-package org.crawel.entity;
+package org.crawler.entity;
 
 public class UrlData {
 	private String web_type;

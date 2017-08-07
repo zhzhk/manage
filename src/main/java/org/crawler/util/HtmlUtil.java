@@ -1,4 +1,4 @@
-package org.crawel.util;
+package org.crawler.util;
 
 public class HtmlUtil {
 

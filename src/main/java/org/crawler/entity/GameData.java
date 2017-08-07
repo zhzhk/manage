@@ -1,11 +1,12 @@
-package org.crawel.entity;
+package org.crawler.entity;
 
+import java.sql.Timestamp;
 import java.util.Date;
 
 public class GameData {
 	
 	/**
-	 * ��������
+	 * 足球赛事bean
 	 */
 	private int mid;
 	private String type;
@@ -19,7 +20,7 @@ public class GameData {
 	private String tg_team_en;
 	private Date m_date;
 	private String m_time;
-	private Date m_start;
+	private Timestamp m_start;
 	private String m_league_cn;
 	private String m_league_tw;
 	private String m_league_en;
@@ -92,20 +93,21 @@ public class GameData {
 	
 	private String rb_show;
 	
-	private int mb_inball;
-	private int tg_inball;
+	//int型 默认插入数据库为0所以修改为String
+	private String mb_inball;
+	private String tg_inball;
 	
-	private int mb_inball_hr;
-	private int tg_inball_hr;
+	private String mb_inball_hr;
+	private String tg_inball_hr;
 	
-	private int mb_ball;
-	private int tg_ball;
+	private String mb_ball;
+	private String tg_ball;
 	
-	private int mb_card;
-	private int tg_card;
+	private String mb_card;
+	private String tg_card;
 	
-	private int mb_red;
-	private int tg_red;
+	private String mb_red;
+	private String tg_red;
 	
 	private String hot;
 	private String isOpen;
@@ -188,10 +190,10 @@ public class GameData {
 	public void setM_time(String m_time) {
 		this.m_time = m_time;
 	}
-	public Date getM_start() {
+	public Timestamp getM_start() {
 		return m_start;
 	}
-	public void setM_start(Date m_start) {
+	public void setM_start(Timestamp m_start) {
 		this.m_start = m_start;
 	}
 	public String getM_league_cn() {
@@ -518,64 +520,64 @@ public class GameData {
 	public void setRb_show(String rb_show) {
 		this.rb_show = rb_show;
 	}
-	public int getMb_inball() {
+	public String getMb_inball() {
 		return mb_inball;
 	}
-	public void setMb_inball(int mb_inball) {
+	public void setMb_inball(String mb_inball) {
 		this.mb_inball = mb_inball;
 	}
-	public int getTg_inball() {
+	public String getTg_inball() {
 		return tg_inball;
 	}
-	public void setTg_inball(int tg_inball) {
+	public void setTg_inball(String tg_inball) {
 		this.tg_inball = tg_inball;
 	}
-	public int getMb_inball_hr() {
+	public String getMb_inball_hr() {
 		return mb_inball_hr;
 	}
-	public void setMb_inball_hr(int mb_inball_hr) {
+	public void setMb_inball_hr(String mb_inball_hr) {
 		this.mb_inball_hr = mb_inball_hr;
 	}
-	public int getTg_inball_hr() {
+	public String getTg_inball_hr() {
 		return tg_inball_hr;
 	}
-	public void setTg_inball_hr(int tg_inball_hr) {
+	public void setTg_inball_hr(String tg_inball_hr) {
 		this.tg_inball_hr = tg_inball_hr;
 	}
-	public int getMb_ball() {
+	public String getMb_ball() {
 		return mb_ball;
 	}
-	public void setMb_ball(int mb_ball) {
+	public void setMb_ball(String mb_ball) {
 		this.mb_ball = mb_ball;
 	}
-	public int getTg_ball() {
+	public String getTg_ball() {
 		return tg_ball;
 	}
-	public void setTg_ball(int tg_ball) {
+	public void setTg_ball(String tg_ball) {
 		this.tg_ball = tg_ball;
 	}
-	public int getMb_card() {
+	public String getMb_card() {
 		return mb_card;
 	}
-	public void setMb_card(int mb_card) {
+	public void setMb_card(String mb_card) {
 		this.mb_card = mb_card;
 	}
-	public int getTg_card() {
+	public String getTg_card() {
 		return tg_card;
 	}
-	public void setTg_card(int tg_card) {
+	public void setTg_card(String tg_card) {
 		this.tg_card = tg_card;
 	}
-	public int getMb_red() {
+	public String getMb_red() {
 		return mb_red;
 	}
-	public void setMb_red(int mb_red) {
+	public void setMb_red(String mb_red) {
 		this.mb_red = mb_red;
 	}
-	public int getTg_red() {
+	public String getTg_red() {
 		return tg_red;
 	}
-	public void setTg_red(int tg_red) {
+	public void setTg_red(String tg_red) {
 		this.tg_red = tg_red;
 	}
 	public String getHot() {
