@@ -1,4 +1,4 @@
-package org.game.util;
+package org.crawel.util;
 
 public class HtmlUtil {
 
